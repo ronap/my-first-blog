@@ -9,6 +9,14 @@
     </body>
     <h3>sub-heading</h3>
     <h4>another sub-heading</h4>
+{{ posts_list }}
+    {% for post in posts %}
+             <div>
+                 <p>published: {{ post.published_date }}</p>
+                 <h2><a href="">{{ post.title }}</a></h2>
+                 <p>{{ post.text|linebreaksbr }}</p>
+             </div>
+         {% endfor %}
 
 <strong>HELLO</strong>
     <p>This is a paragraph of text.<br>
@@ -25,4 +33,5 @@
 <br>
      <p>Published: 27.08.2020</p>
      <p>Last Updated: 27.08.2020</p>
+
 </html>
